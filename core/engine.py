@@ -1,4 +1,4 @@
-
+from core.response import KernelResponse
 from core.intent_parser import IntentParser
 
 
@@ -7,6 +7,10 @@ class KernelEngine:
         self.memory = memory
         self.parser = IntentParser()
         self.pending_forget = None
+
+    def process_structured(self, command):
+        result = self.process(command)
+        return KernelResponse.from_tuple(result)
 
     def process(self, command):
         intent = self.parser.parse(command)
