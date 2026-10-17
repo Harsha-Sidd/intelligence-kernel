@@ -24,7 +24,15 @@ class MemoryStore:
             print("Warning: Memory format is invalid.")
             return {}
 
-        return data
+        # Keep only entries in the expected format.
+        return {
+            key: item
+            for key, item in data.items()
+            if isinstance(key, str)
+            and isinstance(item, dict)
+            and isinstance(item.get("value"), str)
+            and isinstance(item.get("updated_at"), str)
+        }
 
     def save(self):
         self.path.parent.mkdir(parents=True, exist_ok=True)
@@ -45,6 +53,35 @@ class MemoryStore:
 
     def recall(self, key):
         return self.data.get(key)
+
+    def update(self, key, value):
+        if key not in self.data:
+            return False
+
+        self.remember(key, value)
+        return True
+
+    def forget(self, key):
+        if key not in self.data:
+            return False
+
+        del self.data[key]
+        self.save()
+        return True
+
+    def search(self, query):
+        query = query.casefold()
+
+        if not query:
+            return []
+
+        matches = []
+
+        for key, item in self.data.items():
+            if query in key.casefold() or query in item["value"].casefold():
+                matches.append(key)
+
+        return sorted(matches)
 
     def list_keys(self):
         return sorted(self.data)

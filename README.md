@@ -78,3 +78,198 @@ This is an early-stage experimental project. The current implementation uses exp
 ## License
 
 No license has been selected yet. Until a license is added, the project remains subject to applicable copyright law.
+
+## Version 0.3
+
+Version 0.3 improves memory management, input validation, and deletion safety.
+
+### Memory features
+
+- **Remember:** Store a key-value entry.
+- **Update:** Change the value of an existing entry.
+- **Recall:** Retrieve an entry by its exact key.
+- **Search:** Find entries by matching text in their keys or values.
+- **List:** Display stored memory keys.
+- **Forget:** Request deletion of an entry, with explicit confirmation.
+- **Cancel deletion:** Cancel a pending deletion without removing the entry.
+- **Input validation:** Reject empty keys, empty values, and invalid commands.
+- **Memory validation:** Ignore malformed entries when loading stored memory.
+- **Persistence:** Save memory locally in JSON format.
+- **Safer saving:** Write to a temporary file before replacing the memory file.
+
+### Commands
+
+Run the program:
+
+    python main.py
+
+Available commands:
+
+    help
+    remember KEY = VALUE
+    update KEY = VALUE
+    recall KEY
+    search TEXT
+    list
+    forget KEY
+    confirm
+    cancel
+    exit
+
+Example session:
+
+    remember project = Intelligence Kernel
+    update project = Intelligence Kernel v0.3
+    recall project
+    search intelligence
+    forget project
+    cancel
+    exit
+
+After `forget KEY`, type `confirm` to delete the entry or `cancel` to preserve it.
+
+### Testing
+
+Run the automated test suite:
+
+    python -m unittest discover -s tests -v
+
+The v0.3 test suite contains 15 tests covering persistence, validation, updates, duplicate entries, deletion confirmation, search, and malformed memory entries.
+
+### Local memory and privacy
+
+Personal memory is stored locally in `memory/memory.json`. This file is excluded from Git tracking through `.gitignore` and should not be committed to the public repository.
+
+### Project status
+
+Version 0.3 is a rule-based Python prototype. It is an early foundation for a larger, independently developed assistant; it is not yet a trained language model or a general-purpose conversational AI.
+
+## Version 0.3
+
+Version 0.3 improves memory management, input validation, and deletion safety.
+
+### Memory features
+
+- **Remember:** Store a key-value entry.
+- **Update:** Change the value of an existing entry.
+- **Recall:** Retrieve an entry by its exact key.
+- **Search:** Find entries by matching text in their keys or values.
+- **List:** Display stored memory keys.
+- **Forget:** Request deletion of an entry, with explicit confirmation.
+- **Cancel deletion:** Cancel a pending deletion without removing the entry.
+- **Input validation:** Reject empty keys, empty values, and invalid commands.
+- **Memory validation:** Ignore malformed entries when loading stored memory.
+- **Persistence:** Save memory locally in JSON format.
+- **Safer saving:** Write to a temporary file before replacing the memory file.
+
+### Commands
+
+Run the program:
+
+    python main.py
+
+Available commands:
+
+    help
+    remember KEY = VALUE
+    update KEY = VALUE
+    recall KEY
+    search TEXT
+    list
+    forget KEY
+    confirm
+    cancel
+    exit
+
+Example session:
+
+    remember project = Intelligence Kernel
+    update project = Intelligence Kernel v0.3
+    recall project
+    search intelligence
+    forget project
+    cancel
+    exit
+
+After `forget KEY`, type `confirm` to delete the entry or `cancel` to preserve it.
+
+### Testing
+
+Run the automated test suite:
+
+    python -m unittest discover -s tests -v
+
+The v0.3 test suite contains 15 tests covering persistence, validation, updates, duplicate entries, deletion confirmation, search, and malformed memory entries.
+
+### Local memory and privacy
+
+Personal memory is stored locally in `memory/memory.json`. This file is excluded from Git tracking through `.gitignore` and should not be committed to the public repository.
+
+### Project status
+
+Version 0.3 is a rule-based Python prototype. It is an early foundation for a larger, independently developed assistant; it is not yet a trained language model or a general-purpose conversational AI.
+
+## Version 0.3
+
+Version 0.3 improves memory management, input validation, and deletion safety.
+
+### Memory features
+
+- **Remember:** Store a key-value entry.
+- **Update:** Change the value of an existing entry.
+- **Recall:** Retrieve an entry by its exact key.
+- **Search:** Find entries by matching text in their keys or values.
+- **List:** Display stored memory keys.
+- **Forget:** Request deletion of an entry, with explicit confirmation.
+- **Cancel deletion:** Cancel a pending deletion without removing the entry.
+- **Input validation:** Reject empty keys, empty values, and invalid commands.
+- **Memory validation:** Ignore malformed entries when loading stored memory.
+- **Persistence:** Save memory locally in JSON format.
+- **Safer saving:** Write to a temporary file before replacing the memory file.
+
+### Commands
+
+Run the program:
+
+    python main.py
+
+Available commands:
+
+    help
+    remember KEY = VALUE
+    update KEY = VALUE
+    recall KEY
+    search TEXT
+    list
+    forget KEY
+    confirm
+    cancel
+    exit
+
+Example session:
+
+    remember project = Intelligence Kernel
+    update project = Intelligence Kernel v0.3
+    recall project
+    search intelligence
+    forget project
+    cancel
+    exit
+
+After `forget KEY`, type `confirm` to delete the entry or `cancel` to preserve it.
+
+### Testing
+
+Run the automated test suite:
+
+    python -m unittest discover -s tests -v
+
+The v0.3 test suite contains 15 tests covering persistence, validation, updates, duplicate entries, deletion confirmation, search, and malformed memory entries.
+
+### Local memory and privacy
+
+Personal memory is stored locally in `memory/memory.json`. This file is excluded from Git tracking through `.gitignore` and should not be committed to the public repository.
+
+### Project status
+
+Version 0.3 is a rule-based Python prototype. It is an early foundation for a larger, independently developed assistant; it is not yet a trained language model or a general-purpose conversational AI.
