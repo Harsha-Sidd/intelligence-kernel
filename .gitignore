@@ -29,3 +29,6 @@ Thumbs.db
 .coverage
 htmlcov/
 .pytest_cache/
+
+# Local diagnostic logs
+logs/
